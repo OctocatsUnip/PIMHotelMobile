@@ -43,9 +43,9 @@ Em seguida leia o QR code do server.
 
 <br><br>
 Devs:
-- Nicolas Pizzoni<br>
 - Marcello Banbino<br>
 - Kauhan Gomes<br>
 - Milene Martins<br>
 - Carlos Eduardo<br>
 - Thayane Bomfim<br>
+- Nicolas Pizzoni<br>
