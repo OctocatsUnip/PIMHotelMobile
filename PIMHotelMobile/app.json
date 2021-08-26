@@ -1,0 +1,12 @@
+{
+  "name": "PIMHotelMobile",
+  "displayName": "PIMHotelMobile",
+  "expo": {
+    "name": "PIMHotelMobile",
+    "slug": "PIMHotelMobile",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
