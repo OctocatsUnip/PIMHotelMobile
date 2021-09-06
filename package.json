@@ -8,6 +8,8 @@
     "test": "jest"
   },
   "dependencies": {
+    "@types/styled-components": "^5.1.13",
+    "@types/styled-components-react-native": "^5.1.1",
     "expo": "~41.0.1",
     "expo-splash-screen": "~0.10.2",
     "expo-updates": "~0.5.4",
