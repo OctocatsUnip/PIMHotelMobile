@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 import { AntDesign, Octicons } from '@expo/vector-icons';
 import { RectButton } from 'react-native-gesture-handler';
 
-export const Container = styled.View`
+export const Container = styled.SafeAreaView`
     flex: 1;
 `;
 
@@ -29,7 +29,7 @@ export const UserLogin = styled.View`
     height: 50px;
     align-items: center;
     justify-content: space-between;
-    background-color: #CCC;
+    background-color: ${({theme}) => theme.colors.gray};
     padding: 0 10px;
     opacity: 0.8;
 `;
@@ -45,7 +45,7 @@ export const LoginInput = styled.TextInput`
 export const PassIcon = styled(Octicons)``;
 
 export const LoginButton = styled(RectButton)`
-    background-color: #F7BD36;
+    background-color: ${({theme}) => theme.colors.buttonColor};
     height: 35px;
     width: 250px;
     align-items: center;
@@ -54,11 +54,11 @@ export const LoginButton = styled(RectButton)`
 `;
 
 export const ButtonText = styled.Text`
-    color: #000;
+    color: ${({theme}) => theme.colors.primary};
     font-size: 20px;
 `;
 
 export const CreateAccount = styled.Text`
-    color: #fff;
+    color: ${({theme}) => theme.colors.white};
     font-size: 16px;
 `;
