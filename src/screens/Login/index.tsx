@@ -1,127 +1,68 @@
 import React, { useState } from 'react';
-import { 
-    View,
-    Text,
-    StyleSheet,
-    TextInput,
-    Image,
-    ImageBackground,
-    Button
-} from 'react-native';
 
-import themes from '../../../global/themes';
-import { AntDesign, Octicons } from '@expo/vector-icons';
-import { RectButton } from 'react-native-gesture-handler';
+import {
+    Container,
+    ImagemFundo,
+    LogoImage,
+    ButtonText,
+    CreateAccount,
+    LoginArea,
+    Header,
+    LoginButton,
+    LoginInput,
+    PassIcon,
+    UserIcon,
+    UserLogin,
+} from './styles';
+
 
 export default function Login(){
     const [text, setText] = useState("")
     const [senha, setSenha] = useState("")
 
+
     return(
-        <View style={styles.container}>
-            <ImageBackground
+        <Container>
+            <ImagemFundo
                 source={require('../../assets/images/cidadeNoite.png')}
-                style={styles.backgroundImage}
-                imageStyle={{opacity: 0.6}}
             >
-                <View style={styles.header}>
-                    <Image 
+                <Header>
+                    <LogoImage 
                         source={require('../../assets/images/logoLogin.png')}
                         resizeMode="contain"
-                        style={styles.imagem}
                     />
-                </View>
-                <View>
-                    <View style={styles.linha}>
-                        <AntDesign 
+                </Header>
+                <LoginArea>
+                    <UserLogin>
+                        <UserIcon 
                             name="user"
                             size={22}
                             color="#000"
                         />
-                        <TextInput
+                        <LoginInput
                             placeholder="Nome"
                             onChangeText={setText}
-                            style={styles.input}
                             placeholderTextColor="#000"
                         />
-                    </View>
-                    <View style={styles.linha}>
-                        <Octicons name="shield" size={24} color="black" />
-                        <TextInput
+                    </UserLogin>
+                    <UserLogin>
+                        <PassIcon name="shield" size={24} color="black" />
+                        <LoginInput
                             placeholder="Senha"
                             onChangeText={setSenha}
-                            style={styles.input}
                             placeholderTextColor="#000"
                         />
-                    </View>
-                    <RectButton
-                        style={styles.loginButton}
+                    </UserLogin>
+                    <LoginButton
+                        onPress={() => {}}
                     >
-                        <Text>Entrar</Text>
-                    </RectButton>
-                </View>
-                <Text
-                    style={styles.createAccountText}
-                >
+                        <ButtonText>Entrar</ButtonText>
+                    </LoginButton>
+                </LoginArea>
+                <CreateAccount>
                     Não possui uma conta ainda? Crie uma!
-                </Text>
-            </ImageBackground>
-        </View>
+                </CreateAccount>
+            </ImagemFundo>
+        </Container>
     )
 }
-
-const styles = StyleSheet.create({
-    backgroundImage: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'space-around',
-    },
-    container: {
-        flex: 1,
-        backgroundColor: themes.colors.primary,
-    },
-    header: {
-        height: 100,
-    },
-    texto: {
-        color: themes.colors.primary,
-        fontSize: 20
-    },
-    input: {
-        width: 240,
-        height: 55,
-        paddingHorizontal: 15,
-        paddingVertical: 20,
-    },
-    linha: {
-        flexDirection: 'row',
-        marginBottom: 25,
-        width: 250,
-        height: 50,
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        backgroundColor: '#ccc',
-        paddingHorizontal: 10,
-        opacity: 0.8
-    },
-    login: {
-        fontSize: 30,
-        fontWeight: 'bold',
-        marginBottom: 50
-    },
-    loginButton: {
-        backgroundColor: themes.colors.buttonColor,
-        height: 35,
-        width: 240,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 10
-    },
-    createAccountText: {
-        color: 'white',
-        fontSize: 16,
-    },
-    imagem: {
-        height: 100,
-    }
-})
