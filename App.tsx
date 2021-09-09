@@ -7,7 +7,7 @@ import { useFonts, Poppins_400Regular } from '@expo-google-fonts/poppins';
 
 import Login from './src/screens/Login';
 import ListaDeQuartos from './src/screens/ListaDeQuartos';
-import MenuLogado from './src/screens/MenuHospede'
+import MenuHospede from './src/screens/MenuHospede'
 
 export default function App() {
 
@@ -20,7 +20,7 @@ export default function App() {
   }else{
     return (
       <ThemeProvider theme={theme}>
-        <ListaDeQuartos />
+        <MenuHospede />
       </ThemeProvider>
     );
   }

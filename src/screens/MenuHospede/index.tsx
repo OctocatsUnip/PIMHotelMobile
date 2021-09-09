@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+
+import { RectButton } from 'react-native-gesture-handler';
+import { Entypo } from '@expo/vector-icons';
+
 import {
     StyleSheet,
     Text,
@@ -10,17 +14,19 @@ import {
     Image
 } from 'react-native';
 
-import themes from '../../../global/themes';
-import { RectButton } from 'react-native-gesture-handler';
-import { Entypo } from '@expo/vector-icons';
+import MyBedroomCard from '../../components/MyBedroomCard'
 
-export default function MenuLogado() {
+export default function MenuHospede() {
 
     const [page, setPage] = useState("1 2")
 
     return (
-        <SafeAreaView style={styles.container}>
-            <ScrollView style={styles.scrollView}>
+            <ScrollView
+                contentContainerStyle={{
+                    paddingTop: StatusBar.currentHeight,
+                    paddingHorizontal: 15
+                }}
+            >
                 <View style={styles.header}>
                     <StatusBar
                         translucent
@@ -45,42 +51,7 @@ export default function MenuLogado() {
                         <Text style={styles.roomHeader}>
                             Meus quartos
                         </Text>
-                        <View style={styles.roomsArea}>
-                            <Image
-                                source={require('../../assets/images/quarto1.png')}
-                                resizeMode="contain"
-                                style={styles.roomImage}
-                            />
-                            <View style={{ flex: 1, alignItems: 'center' }}>
-                                <Text style={styles.roomsDescription}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat blandit ipsum dolor sit amet, consectetur adipiscing elit. Consequat blandit
-                                </Text>
-                                <RectButton
-                                    style={styles.serviceButton}
-                                    onPress={() => { alert("Quarto 1") }}
-                                >
-                                    <Text style={styles.textButton}>Serviços</Text>
-                                </RectButton>
-                            </View>
-                        </View>
-                        <View style={styles.roomsArea}>
-                            <Image
-                                source={require('../../assets/images/quarto2.png')}
-                                resizeMode="contain"
-                                style={styles.roomImage}
-                            />
-                            <View style={{ flex: 1, alignItems: 'center' }}>
-                                <Text style={styles.roomsDescription}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat blandit ipsum dolor sit amet, consectetur adipiscing elit. Consequat blandit
-                                </Text>
-                                <RectButton
-                                    style={styles.serviceButton}
-                                    onPress={() => { alert("Quarto 2") }}
-                                >
-                                    <Text style={styles.textButton}>Serviços</Text>
-                                </RectButton>
-                            </View>
-                        </View>
+                            <MyBedroomCard />
                         <View style={styles.page}>
                             <Text style={styles.pagesNumber}>
                                 -- {page} --
@@ -117,7 +88,7 @@ export default function MenuLogado() {
                         </View>
                         <Image
                             source={require('../../assets/images/covid.png')}
-                            resizeMode="stretch"
+                            resizeMode="contain"
                             style={styles.bannerImage}
                         />
                         <View style={styles.newsletterArea}>
@@ -155,14 +126,12 @@ export default function MenuLogado() {
                     </View>
                 </View>
             </ScrollView>
-        </SafeAreaView>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        paddingTop: StatusBar.currentHeight,
+        
     },
     header: {
         backgroundColor: "#000",
@@ -184,10 +153,10 @@ const styles = StyleSheet.create({
     },
     roomHeader: {
         fontSize: 20,
-        fontWeight: "bold"
+        fontWeight: "bold",
+        margin: 20
     },
     rooms: {
-        marginLeft: 20,
     },
     roomsArea: {
         marginTop: 20,
@@ -199,7 +168,6 @@ const styles = StyleSheet.create({
     roomsDescription: {
         fontSize: 16,
         marginLeft: 18,
-        marginRight: 18,
         flexGrow: 1,
         flex: 1,
     },

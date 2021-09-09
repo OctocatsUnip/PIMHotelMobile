@@ -45,7 +45,7 @@ export const LoginInput = styled.TextInput`
 export const PassIcon = styled(Octicons)``;
 
 export const LoginButton = styled(RectButton)`
-    background-color: ${({theme}) => theme.colors.buttonColor};
+    background-color: ${({theme}) => theme.colors.buttonLogin};
     height: 35px;
     width: 250px;
     align-items: center;
