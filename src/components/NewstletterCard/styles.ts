@@ -13,19 +13,19 @@ export const NewsletterImage = styled.Image`
 export const Content = styled.View`
     margin-top: 10px;
     flex-direction: column;
-    paddingHorizontal: 10px;
+    padding: 0 10px;
     flex-shrink: 1;
 `;
 
 export const NewsletterTitle = styled.Text `
-    fontSize: 25px;
+    font-size: 25px;
     font-Weight: bold;
-    marginBottom: 10px;
+    margin-bottom: 10px;
 `;
 
 export const NewsletterDescription = styled.Text `
     font-size: 20px;
     text-align: left;
-    flexGrow: 1;
+    flex-grow: 1;
     flex: 1;
 `;
