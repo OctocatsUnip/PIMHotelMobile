@@ -1,8 +1,10 @@
 import styled from 'styled-components/native';
 import { RFValue } from 'react-native-responsive-fontsize';
+import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
 export const Container = styled.View`
     background-color: ${({theme}) => theme.colors.primary};
+    padding-top: ${getStatusBarHeight()}px;
 `;
 
 export const Content = styled.View`

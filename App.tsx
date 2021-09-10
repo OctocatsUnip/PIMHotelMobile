@@ -6,8 +6,8 @@ import AppLoading from 'expo-app-loading';
 import { useFonts, Poppins_400Regular } from '@expo-google-fonts/poppins';
 
 import Login from './src/screens/Login';
-import ListaDeQuartos from './src/screens/ListaDeQuartos';
-import MenuHospede from './src/screens/MenuHospede'
+
+import { Routes } from './src/routes';
 
 export default function App() {
 
@@ -20,7 +20,7 @@ export default function App() {
   }else{
     return (
       <ThemeProvider theme={theme}>
-        <MenuHospede />
+        <Routes />
       </ThemeProvider>
     );
   }
