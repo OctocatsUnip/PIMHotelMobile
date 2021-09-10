@@ -5,13 +5,9 @@ import { RectButton } from 'react-native-gesture-handler';
 export const Container = styled.View`
     flex-direction: row;
     background-color: ${({theme}) => theme.colors.white};
-    padding: 10px 20px;
+    padding: 20px 20px;
     align-items: center;
     justify-content: space-around;
-    border-width: 2px;
-    border-color: ${({theme}) => theme.colors.gray};
-    border-radius: 15px;
-    margin-bottom: 10px;
 `;
 
 export const BedroomImage = styled.Image`

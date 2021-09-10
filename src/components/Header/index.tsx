@@ -15,7 +15,7 @@ export default function Header(){
                 source={require('../../assets/images/header.png')}
             />
             <Content>
-                <UserName>Nicolas</UserName>
+                <UserName>Marcelo</UserName>
                 <ProfilePhoto
                     source={require('../../assets/images/cidadeNoite.png')}
                 />
