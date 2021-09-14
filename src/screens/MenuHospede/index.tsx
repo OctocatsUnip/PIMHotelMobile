@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-import { RectButton } from 'react-native-gesture-handler';
-
 import {
     Text,
     ScrollView,
@@ -23,6 +21,7 @@ import {
 } from './styles';
 
 import MyBedroomCard from '../../components/MyBedroomCard'
+import NoBedroomCard from '../../components/NoBedroomCard'
 import NewstletterCard from '../../components/NewstletterCard'
 import Header from '../../components/Header'
 
@@ -44,8 +43,9 @@ export default function MenuHospede() {
                         <BedroomHeader>
                             Meus quartos
                         </BedroomHeader>
-                            <MyBedroomCard />
-                            <MyBedroomCard />
+                            {/* <MyBedroomCard />
+                            <MyBedroomCard /> */}
+                            <NoBedroomCard />
                         <BedroomPage>
                             <PageNumber>
                                 -- {page} --
