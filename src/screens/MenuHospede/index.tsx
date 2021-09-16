@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import {
-    Text,
     ScrollView,
     StatusBar,
 } from 'react-native';
@@ -17,7 +16,9 @@ import {
     NewsletterHeader,
     BannerImage,
     MoreButton,
-    NewsletterButton
+    NewsletterButton,
+    Content,
+    Separator
 } from './styles';
 
 import MyBedroomCard from '../../components/MyBedroomCard'
@@ -27,32 +28,34 @@ import Header from '../../components/Header'
 
 export default function MenuHospede() {
 
-    const [page, setPage] = useState("1 2")
+    const [page, setPage] = useState("1 2");
+    const [quarto, setQuarto] = useState();
 
     return (
             <ScrollView
                 contentContainerStyle={{
-                    paddingTop: StatusBar.currentHeight,
-                    paddingHorizontal: 15,
                     backgroundColor: "white"
                 }}
+                showsVerticalScrollIndicator={false}
             >
                 <Header/>
+                <Content>
                 <HospedeArea>
                     <BedroomArea>
                         <BedroomHeader>
                             Meus quartos
                         </BedroomHeader>
-                            {/* <MyBedroomCard />
-                            <MyBedroomCard /> */}
-                            <NoBedroomCard />
+                            {
+                                !quarto ?
+                                <MyBedroomCard />
+                                :
+                                <NoBedroomCard />
+                            }
                         <BedroomPage>
                             <PageNumber>
                                 -- {page} --
                             </PageNumber>
-                            <Text>
-                                ______________________________________________
-                            </Text>
+                            <Separator />
                         </BedroomPage>
                     </BedroomArea>
                     <NewsletterArea>
@@ -62,7 +65,7 @@ export default function MenuHospede() {
                             <NewstletterCard />
                         <BannerImage
                             source={require('../../assets/images/covid.png')}
-                            resizeMode="contain"
+                            resizeMode="stretch"
                         />
                             <NewstletterCard />
                         <MoreButton>
@@ -74,6 +77,7 @@ export default function MenuHospede() {
                         </MoreButton>
                     </NewsletterArea>
                 </HospedeArea>
+                </Content>
             </ScrollView>
     )
 }

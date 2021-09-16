@@ -1,12 +1,17 @@
 import styled from 'styled-components/native';
 import { RectButton } from 'react-native-gesture-handler';
 
-export const Container = styled.View`
+export const Container = styled(RectButton)`
+    
+`;
+
+export const ButtonContent = styled.View`
     flex-direction: row;
     background-color: ${({theme}) => theme.colors.white};
     padding: 20px 20px;
     align-items: center;
     justify-content: space-around;
+    border-width: 1px;
 `;
 
 export const BedroomImage = styled.Image`
