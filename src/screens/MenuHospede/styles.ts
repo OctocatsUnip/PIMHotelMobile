@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import { RectButton } from 'react-native-gesture-handler';
 
-export const HospedeArea = styled.View``;
+export const GuestArea = styled.View``;
 
 export const BedroomArea = styled.View`
 `;
@@ -48,7 +48,7 @@ export const MoreButton = styled.View`
 `;
 
 export const NewsletterButton = styled(RectButton)`
-    background-color: ${({theme}) => theme.colors.buttonColor};
+    background-color: ${({ theme }) => theme.colors.buttonColor};
     height: 50px;
     width: 160px;
     align-items: center;
@@ -62,5 +62,5 @@ export const Content = styled.View`
 export const Separator = styled.View`
     border-bottom-width: 1px;
     width: 80%;
-    border-color: ${({theme}) => theme.colors.gray};
+    border-color: ${({ theme }) => theme.colors.gray};
 `;

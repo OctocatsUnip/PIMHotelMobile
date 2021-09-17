@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 
 import {
-    HospedeArea,
+    GuestArea,
     BedroomArea,
     BedroomHeader,
     TextButton,
@@ -32,25 +32,25 @@ export default function MenuHospede() {
     const [quarto, setQuarto] = useState();
 
     return (
-            <ScrollView
-                contentContainerStyle={{
-                    backgroundColor: "white"
-                }}
-                showsVerticalScrollIndicator={false}
-            >
-                <Header/>
-                <Content>
-                <HospedeArea>
+        <ScrollView
+            contentContainerStyle={{
+                backgroundColor: "white"
+            }}
+            showsVerticalScrollIndicator={false}
+        >
+            <Header />
+            <Content>
+                <GuestArea>
                     <BedroomArea>
                         <BedroomHeader>
                             Meus quartos
                         </BedroomHeader>
-                            {
-                                !quarto ?
+                        {
+                            !quarto ?
                                 <MyBedroomCard />
                                 :
                                 <NoBedroomCard />
-                            }
+                        }
                         <BedroomPage>
                             <PageNumber>
                                 -- {page} --
@@ -62,22 +62,22 @@ export default function MenuHospede() {
                         <NewsletterHeader>
                             Últimas Notícias
                         </NewsletterHeader>
-                            <NewstletterCard />
+                        <NewstletterCard />
                         <BannerImage
                             source={require('../../assets/images/covid.png')}
                             resizeMode="stretch"
                         />
-                            <NewstletterCard />
+                        <NewstletterCard />
                         <MoreButton>
                             <NewsletterButton
                                 onPress={() => { alert("Saiba Mais!") }}
-                                >
+                            >
                                 <TextButton>Saiba Mais!</TextButton>
                             </NewsletterButton>
                         </MoreButton>
                     </NewsletterArea>
-                </HospedeArea>
-                </Content>
-            </ScrollView>
+                </GuestArea>
+            </Content>
+        </ScrollView>
     )
 }

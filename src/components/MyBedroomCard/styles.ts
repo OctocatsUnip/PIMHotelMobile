@@ -11,7 +11,6 @@ export const ButtonContent = styled.View`
     padding: 20px 20px;
     align-items: center;
     justify-content: space-around;
-    border-width: 1px;
 `;
 
 export const BedroomImage = styled.Image`
