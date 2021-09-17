@@ -5,6 +5,7 @@ export const Container = styled.View`
     border-top-width: 15px;
     border-color:  ${({ theme }) => theme.colors.buttonColor};
     width: 80%;
+    margin: 10px 0;
 `;
 
 export const OptionsContent = styled.View`
