@@ -26,7 +26,6 @@ export const Title = styled.Text`
     font-family: ${({theme}) => theme.fonts.regular};
     font-size: 30px;
     font-weight: bold;
-    margin: 10px 0;
 `;
 
 export const InfoArea = styled.View`
@@ -71,4 +70,11 @@ export const DescriptionText = styled.Text`
 
 export const CheckIcon = styled(FontAwesome5)`
     margin-right: 5px;
+`;
+
+export const ButtonContainer = styled.View`
+    width: 100%;
+    padding: 10px 30px;
+    align-items: center;
+    justify-content: center;
 `;

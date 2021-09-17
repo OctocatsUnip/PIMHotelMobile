@@ -1,20 +1,24 @@
 import styled from 'styled-components/native';
-import { RectButton } from 'react-native-gesture-handler';
+import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
 export const GuestArea = styled.View``;
 
 export const BedroomArea = styled.View`
 `;
 
+export const Container = styled.ScrollView.attrs({
+    contentContainerStyle: {
+        backgroundColor: "white"
+     },
+     showsVerticalScrollIndicator:false
+})`
+    margin-top: ${getStatusBarHeight()}px;
+`;
+
 export const BedroomHeader = styled.Text`
     font-size: 25px;
     font-weight: bold;
     margin: 10px;
-`;
-
-export const TextButton = styled.Text`
-    font-size: 25px;
-    color: white;
 `;
 
 export const BedroomPage = styled.View`
@@ -40,19 +44,6 @@ export const NewsletterHeader = styled.Text`
 export const BannerImage = styled.Image`
     height: 120px;
     width: 100%;
-`;
-
-export const MoreButton = styled.View`
-    flex: 1;
-    align-items: center;
-`;
-
-export const NewsletterButton = styled(RectButton)`
-    background-color: ${({ theme }) => theme.colors.buttonColor};
-    height: 50px;
-    width: 160px;
-    align-items: center;
-    justify-content: center;
 `;
 
 export const Content = styled.View`

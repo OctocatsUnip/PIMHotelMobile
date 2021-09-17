@@ -1,5 +1,7 @@
 import React from 'react';
+import { Dimensions, Platform } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from "@react-navigation/stack";
 import { getBottomSpace } from 'react-native-iphone-x-helper';
 
 import { FontAwesome5 } from '@expo/vector-icons'
@@ -8,9 +10,24 @@ import SolicitarServicos from '../screens/SolicitarServicos';
 import ListaDeQuartos from '../screens/ListaDeQuartos';
 import MenuHospede from '../screens/MenuHospede';
 import Pacotes from '../screens/Pacotes';
-import { Dimensions, Platform } from 'react-native';
+import Filtro from '../screens/Filtro';
 
 const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
+
+function Quartos(){
+    return(
+        <Stack.Navigator
+            screenOptions={{
+                headerShown: false
+            }}
+            initialRouteName="ListaDeQuartos"
+        >
+            <Stack.Screen name="ListaDeQuartos" component={ListaDeQuartos}/>
+            <Stack.Screen name="Filtro" component={Filtro}/>
+        </Stack.Navigator>
+    )
+}
 
 export default function TabRoutes(){
     return(
@@ -39,7 +56,7 @@ export default function TabRoutes(){
             />
             <Tab.Screen 
                 name="Quartos" 
-                component={ListaDeQuartos}
+                component={Quartos}
                 options={{
                     tabBarIcon: (({color}) => (
                         <FontAwesome5 name="bed" size={24} color={color} />

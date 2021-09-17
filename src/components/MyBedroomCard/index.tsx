@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
+import { Button } from '../Button';
 
 import {
     Container,
     Content,
     BedroomImage,
     Description,
-    ButtonServices,
-    ButtonText,
     ButtonContent
 } from './styles';
 
@@ -20,12 +19,10 @@ export default function MyBedroomCard(){
                 resizeMode="contain"
             />
             <Content>
-                    <Description>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </Description>
-                <ButtonServices>
-                    <ButtonText>Serviços</ButtonText>
-                </ButtonServices>
+                <Description>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </Description>
+                <Button text="Serviços" />
             </Content>
             </ButtonContent>
         </Container>

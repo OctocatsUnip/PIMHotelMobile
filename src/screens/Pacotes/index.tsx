@@ -9,8 +9,6 @@ import {
    Separator,
    OptionsHeader,
    OptionsArea,
-   OptionsCard,
-   Text
 } from './styles';
 
 import BedroomOptionsCard from '../../components/BedroomOptionsCard'

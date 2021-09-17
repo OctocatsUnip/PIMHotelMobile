@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button } from '../Button';
 
 import {
     Container,
@@ -19,7 +20,7 @@ import {
     OptionsContent
 } from './styles';
 
-export default function MyBedroomCard() {
+export default function BedroomOptionsCard() {
     const [ativo, setAtivo] = useState(false);
 
     return (
@@ -61,9 +62,7 @@ export default function MyBedroomCard() {
                     </PriceDetails>
                 </PriceContent>
                 <ButtonContent>
-                    <ButtonServices>
-                        <ButtonText>Reservar agora!</ButtonText>
-                    </ButtonServices>
+                    <Button text="Reservar agora!" width="80%" />
                 </ButtonContent>
             </OptionsContent>
         </Container>

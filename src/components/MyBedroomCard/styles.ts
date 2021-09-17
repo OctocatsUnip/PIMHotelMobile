@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 import { RectButton } from 'react-native-gesture-handler';
 
 export const Container = styled(RectButton)`
-    
+
 `;
 
 export const ButtonContent = styled.View`
@@ -11,6 +11,8 @@ export const ButtonContent = styled.View`
     padding: 20px 20px;
     align-items: center;
     justify-content: space-around;
+    border-width: 1px;
+    border-radius: 10px;
 `;
 
 export const BedroomImage = styled.Image`
@@ -30,17 +32,4 @@ export const Description = styled.Text`
     font-size: 14px;
     text-align: left;
     margin-bottom: 20px;
-`;
-
-export const ButtonServices = styled(RectButton)`
-    padding: 10px;
-    background-color: ${({theme}) => theme.colors.buttonColor};
-    align-items: center;
-    justify-content: center;
-`;
-
-export const ButtonText = styled.Text`
-    font-family: ${({theme}) => theme.fonts.regular};
-    color: ${({theme}) => theme.colors.white};
-    font-size: 16px;
 `;

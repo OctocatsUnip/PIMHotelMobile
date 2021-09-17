@@ -89,11 +89,11 @@ export const ButtonText = styled.Text`
 export const SeparatorCompressed = styled.View`
     border-bottom-width: 1px;
     width: 100%;
-    border-color "#000";
+    border-color: #000;
 `;
 
 export const Separator = styled.View`
     border-bottom-width: 1px;
     width: 100%;
-    border-color "#000";
+    border-color: #000;
 `;

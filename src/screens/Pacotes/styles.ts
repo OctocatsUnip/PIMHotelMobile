@@ -1,10 +1,10 @@
-import { StyleSheetManager } from 'styled-components';
 import styled from 'styled-components/native';
+import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
 export const Container = styled.View`
    flex: 1;
    justify-content: center;
-   margin-top: 20px;
+   padding-top: ${getStatusBarHeight()}px;
 `;
 
 export const Text = styled.Text``;
@@ -22,7 +22,7 @@ export const BedroomTypeHeader = styled.Text`
 export const Separator = styled.View`
     border-bottom-width: 2px;
     width: 50%;
-    border-color "#000";
+    border-color: #000;
 `;
 
 export const OptionsHeader = styled.Text`

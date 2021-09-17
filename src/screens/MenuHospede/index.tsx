@@ -1,30 +1,24 @@
 import React, { useState } from 'react';
 
 import {
-    ScrollView,
-    StatusBar,
-} from 'react-native';
-
-import {
     GuestArea,
     BedroomArea,
     BedroomHeader,
-    TextButton,
     BedroomPage,
     PageNumber,
     NewsletterArea,
     NewsletterHeader,
     BannerImage,
-    MoreButton,
-    NewsletterButton,
     Content,
-    Separator
+    Separator,
+    Container,
 } from './styles';
 
 import MyBedroomCard from '../../components/MyBedroomCard'
 import NoBedroomCard from '../../components/NoBedroomCard'
 import NewstletterCard from '../../components/NewstletterCard'
 import Header from '../../components/Header'
+import { Button } from '../../components/Button';
 
 export default function MenuHospede() {
 
@@ -32,12 +26,7 @@ export default function MenuHospede() {
     const [quarto, setQuarto] = useState();
 
     return (
-        <ScrollView
-            contentContainerStyle={{
-                backgroundColor: "white"
-            }}
-            showsVerticalScrollIndicator={false}
-        >
+        <Container>
             <Header />
             <Content>
                 <GuestArea>
@@ -68,16 +57,10 @@ export default function MenuHospede() {
                             resizeMode="stretch"
                         />
                         <NewstletterCard />
-                        <MoreButton>
-                            <NewsletterButton
-                                onPress={() => { alert("Saiba Mais!") }}
-                            >
-                                <TextButton>Saiba Mais!</TextButton>
-                            </NewsletterButton>
-                        </MoreButton>
+                        <Button text="Saiba Mais!" />
                     </NewsletterArea>
                 </GuestArea>
             </Content>
-        </ScrollView>
+        </Container>
     )
 }

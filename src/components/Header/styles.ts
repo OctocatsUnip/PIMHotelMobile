@@ -4,7 +4,6 @@ import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
 export const Container = styled.View`
     background-color: ${({theme}) => theme.colors.primary};
-    margin-top: ${getStatusBarHeight()}px;
 `;
 
 export const Content = styled.View`

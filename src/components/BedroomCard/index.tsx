@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTheme } from 'styled-components';
+import { Button } from '../Button';
 
 import {
     Container,
@@ -14,7 +15,8 @@ import {
     BedroomInfo,
     DescriptionContainer,
     DescriptionText,
-    CheckIcon
+    CheckIcon,
+    ButtonContainer
 } from './styles';
 
 export default function BedroomCard(){
@@ -47,6 +49,9 @@ export default function BedroomCard(){
                     <DescriptionText>Café da manhã</DescriptionText>
                 </DescriptionContainer>
             </Content>
+            <ButtonContainer>
+                <Button text="Reservar agora!" />
+            </ButtonContainer>
         </Container>
     )
 }
