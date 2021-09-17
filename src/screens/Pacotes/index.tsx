@@ -38,9 +38,8 @@ export default function Pacotes() {
                Pacotes
             </OptionsHeader>
             <OptionsArea>
-               {/* <OptionsCard> */}
                <BedroomOptionsCard />
-               {/* </OptionsCard> */}
+               <BedroomOptionsCard />
             </OptionsArea>
          </Container>
       </ScrollView>
