@@ -43,7 +43,7 @@ Em seguida leia o QR code do server.
 
 <br><br>
 Devs:
-- Marcello Banbino<br>
+- Marcelo Balbino<br>
 - Kauhan Gomes<br>
 - Milene Martins<br>
 - Carlos Eduardo<br>
