@@ -11,6 +11,7 @@ import ListaDeQuartos from '../screens/ListaDeQuartos';
 import MenuHospede from '../screens/MenuHospede';
 import Pacotes from '../screens/Pacotes';
 import Filtro from '../screens/Filtro';
+import Reserva from '../screens/Reserva';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -74,7 +75,8 @@ export default function TabRoutes(){
             />
             <Tab.Screen 
                 name="Solicitar Servicos" 
-                component={SolicitarServicos}
+                //component={SolicitarServicos}
+                component={Reserva}
                 options={{
                     tabBarIcon: (({color}) => (
                         <FontAwesome5 name="concierge-bell" size={24} color={color} />
