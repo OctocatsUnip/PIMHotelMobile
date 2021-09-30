@@ -6,7 +6,7 @@ interface ButtonProps {
 };
 
 export const Container = styled(RectButton)<ButtonProps>`
-    padding: 10px 20px;
+    padding: 10px 0;
     width: ${({width}) => width};
     align-items: center;
     justify-content: center;
@@ -15,6 +15,6 @@ export const Container = styled(RectButton)<ButtonProps>`
 
 export const ButtonText = styled.Text`
     font-family: ${({theme}) => theme.fonts.regular};
-    font-size: 16px;
+    font-size: 13px;
     color: ${({theme}) => theme.colors.white};
 `;

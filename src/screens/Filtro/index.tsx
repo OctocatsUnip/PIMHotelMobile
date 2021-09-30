@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import Header from '../../components/Header';
+import { Range } from 'react-range';
 
 import {
     Container,
@@ -17,6 +18,8 @@ import {
 } from './styles';
 
 export default function Filtro() {
+    const price = useRef([0]);
+
    return (
         <Container>
             <Header />

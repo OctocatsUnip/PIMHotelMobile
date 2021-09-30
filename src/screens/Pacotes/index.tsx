@@ -12,6 +12,7 @@ import {
 } from './styles';
 
 import BedroomOptionsCard from '../../components/BedroomOptionsCard'
+import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
 export default function Pacotes() {
 
@@ -20,7 +21,8 @@ export default function Pacotes() {
    return (
       <ScrollView
          contentContainerStyle={{
-            backgroundColor: "white"
+            backgroundColor: "white",
+            marginTop: getStatusBarHeight()
          }}
          showsVerticalScrollIndicator={false}
       >
