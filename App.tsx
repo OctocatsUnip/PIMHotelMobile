@@ -8,6 +8,7 @@ import { useFonts, Poppins_400Regular } from '@expo-google-fonts/poppins';
 import Login from './src/screens/Login';
 
 import { Routes } from './src/routes';
+import { StatusBar } from 'react-native';
 
 export default function App() {
 
@@ -20,6 +21,11 @@ export default function App() {
   }else{
     return (
       <ThemeProvider theme={theme}>
+        <StatusBar
+          backgroundColor="#fff"
+          barStyle="dark-content"
+          translucent
+        />
         <Routes />
       </ThemeProvider>
     );

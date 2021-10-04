@@ -10,12 +10,11 @@ import {
     CheckContent,
     CheckTitle,
     CheckText,
-    Text,
     SectionContainer,
     Title,
-    CheckBoxContainer,
-    CheckBox,
 } from './styles';
+
+import {Check} from '../../components/Check';
 
 export default function Filtro() {
     const price = useRef([0]);
@@ -37,75 +36,25 @@ export default function Filtro() {
                 </RowContainer>
                 <SectionContainer>
                     <Title>Promoções</Title>
-                    <RowContainer>
-                        <CheckBoxContainer>
-                            <CheckBox />
-                        </CheckBoxContainer>
-                        <Text>Cancelamento grátis</Text>
-                    </RowContainer>
-                    <RowContainer>
-                        <CheckBoxContainer>
-                            <CheckBox />
-                        </CheckBoxContainer>
-                        <Text>Reserve agora, pague quando chegar</Text>
-                    </RowContainer>
-                    <RowContainer>
-                        <CheckBoxContainer>
-                            <CheckBox />
-                        </CheckBoxContainer>
-                        <Text>Pacotes da semana</Text>
-                    </RowContainer>
+                    <Check name="Cancelamento grátis" />
+                    <Check name="Reserve agora, pague quando chegar" />
+                    <Check name="Pacotes da semana" />
                 </SectionContainer>
                 <SectionContainer>
                     <Title>Preço</Title>
                 </SectionContainer>
                 <SectionContainer>
                     <Title>Tipos de quartos</Title>
-                    <RowContainer>
-                        <CheckBoxContainer>
-                            <CheckBox />
-                        </CheckBoxContainer>
-                        <Text>Luxuoso</Text>
-                    </RowContainer>
-                    <RowContainer>
-                        <CheckBoxContainer>
-                            <CheckBox />
-                        </CheckBoxContainer>
-                        <Text>Econômico</Text>
-                    </RowContainer>
-                    <RowContainer>
-                        <CheckBoxContainer>
-                            <CheckBox />
-                        </CheckBoxContainer>
-                        <Text>Família</Text>
-                    </RowContainer>
-                    <RowContainer>
-                        <CheckBoxContainer>
-                            <CheckBox />
-                        </CheckBoxContainer>
-                        <Text>Fumante</Text>
-                    </RowContainer>
+                    <Check name="Luxuoso" />
+                    <Check name="Econômico" />
+                    <Check name="Família" />
+                    <Check name="Fumante" />
                 </SectionContainer>
                 <SectionContainer>
                     <Title>Serviços</Title>
-                    <RowContainer>
-                        <CheckBoxContainer>
-                            <CheckBox />
-                        </CheckBoxContainer>
-                        <Text>Café da manhã</Text>
-                    </RowContainer>
-                    <RowContainer>
-                        <CheckBoxContainer>
-                            <CheckBox />
-                        </CheckBoxContainer>
-                        <Text>Banheira de Hidromassagem</Text>
-                    </RowContainer>
-                    <RowContainer>
-                        <CheckBoxContainer>
-                            <CheckBox />
-                        </CheckBoxContainer>
-                        <Text>Estacionamento gratuíto</Text>
-                    </RowContainer>
+                    <Check name="Café da manhã" />
+                    <Check name="Banheira de hidromassagem" />
+                    <Check name="Estacionamento gratuíto" />
                 </SectionContainer>
                 <SectionContainer>
                     <Title>Pontuação</Title>

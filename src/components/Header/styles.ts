@@ -7,7 +7,7 @@ export const Container = styled.View`
 `;
 
 export const Content = styled.View`
-    height: 100px;
+    height: 80px;
     width: 100%;
     flex-direction: row;
     align-items: center;
@@ -17,7 +17,7 @@ export const Content = styled.View`
 
 export const ImageHeader = styled.Image`
     position: absolute;
-    height: 100px;
+    height: 80px;
     width: 100%;
     opacity: 0.4;
 `;

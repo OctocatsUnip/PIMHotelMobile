@@ -22,7 +22,8 @@ export default function Pacotes() {
       <ScrollView
          contentContainerStyle={{
             backgroundColor: "white",
-            marginTop: getStatusBarHeight()
+            marginTop: getStatusBarHeight(),
+            paddingBottom: 60
          }}
          showsVerticalScrollIndicator={false}
       >
@@ -38,8 +39,7 @@ export default function Pacotes() {
                Pacotes
             </OptionsHeader>
             <OptionsArea>
-               <BedroomOptionsCard />
-               <BedroomOptionsCard />
+               <BedroomOptionsCard screen="Reserva"/>
             </OptionsArea>
          </Container>
       </ScrollView>

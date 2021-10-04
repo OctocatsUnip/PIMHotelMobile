@@ -21,7 +21,7 @@ export default function NewstletterCard(){
                     LOREM IPSUM
                 </NewsletterTitle>
                 <NewsletterDescription>
-                    Lorem ipsum dolor sit amet, consectetur...
+                    Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur
                 </NewsletterDescription>
             </Content>
         </Container>
