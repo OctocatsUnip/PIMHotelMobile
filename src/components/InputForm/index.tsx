@@ -10,7 +10,7 @@ import {Input} from '../Input';
 interface InputFormProps extends TextInputProps {
     name: string;
     control: Control;
-    error: string;
+    error?: string;
 }
 
 export function InputForm({ control, name, error, ...rest} : InputFormProps){
