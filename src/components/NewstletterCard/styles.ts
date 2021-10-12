@@ -3,6 +3,7 @@ import styled from 'styled-components/native';
 export const Container = styled.View`
     flex-direction: row;
     background-color: ${({theme}) => theme.colors.white};
+    margin-bottom: 20px;
 `;
 
 export const NewsletterImage = styled.Image`
@@ -23,7 +24,9 @@ export const NewsletterTitle = styled.Text `
     margin-bottom: 10px;
 `;
 
-export const NewsletterDescription = styled.Text `
+export const NewsletterDescription = styled.Text.attrs({
+    numberOfLines: 2
+})`
     font-size: 20px;
     text-align: left;
     flex-grow: 1;

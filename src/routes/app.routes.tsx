@@ -30,6 +30,20 @@ function Quartos(){
     )
 }
 
+function Pacote(){
+    return(
+        <Stack.Navigator
+        screenOptions={{
+            headerShown: false
+        }}
+        initialRouteName="Pacotes"
+        >
+            <Stack.Screen name="Pacotes" component={Pacotes}/>
+            <Stack.Screen name="Reserva" component={Reserva}/>
+        </Stack.Navigator>
+    )
+}
+
 export default function TabRoutes(){
     return(
         <Tab.Navigator
@@ -65,8 +79,8 @@ export default function TabRoutes(){
                 }}
             />
             <Tab.Screen 
-                name="Pacotes" 
-                component={Pacotes}
+                name="Pacote" 
+                component={Pacote}
                 options={{
                     tabBarIcon: (({color}) => (
                         <FontAwesome5 name="smile-wink" size={24} color={color} />
@@ -75,8 +89,7 @@ export default function TabRoutes(){
             />
             <Tab.Screen 
                 name="Solicitar Servicos" 
-                //component={SolicitarServicos}
-                component={Reserva}
+                component={SolicitarServicos}
                 options={{
                     tabBarIcon: (({color}) => (
                         <FontAwesome5 name="concierge-bell" size={24} color={color} />

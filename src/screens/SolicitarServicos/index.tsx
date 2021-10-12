@@ -19,11 +19,26 @@ import {
    
 } from './styles';
 
+<<<<<<< HEAD
+import {Check} from '../../components/Check';
+
+export default function SolicitarServicos() {
+=======
 import { Button } from '../../components/Button';
+>>>>>>> 2c7aa149240bd2d4731360bb438aa4918a3e7809
 
 
 export default function SolicitarServicos() {
    return (
+<<<<<<< HEAD
+        <Container>
+            <Text>Em produção</Text>
+            <Check name="teset"/>
+            <Check name="teset"/>
+            <Check name="teset"/>
+        </Container>
+   );
+=======
       <Container>
           <Header />
           <Content>
@@ -109,4 +124,5 @@ export default function SolicitarServicos() {
           </Content>
       </Container>
  );
+>>>>>>> 2c7aa149240bd2d4731360bb438aa4918a3e7809
 }

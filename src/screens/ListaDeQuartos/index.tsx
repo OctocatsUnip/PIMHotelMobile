@@ -12,7 +12,7 @@ import { Button } from '../../components/Button';
 import BedroomCard from '../../components/BedroomCard';
 
 export default function ListaDeQuartos(){
-    const navigation = useNavigation();
+    const navigation = useNavigation<any>();
 
     function Filtrar(){
         navigation.navigate("Filtro")

@@ -44,12 +44,6 @@ export const CheckText = styled.Text`
     font-family: ${({theme}) => theme.fonts.regular};
 `;
 
-export const Text = styled.Text`
-    font-family: ${({theme}) => theme.fonts.regular};
-    font-size: 17px;
-    flex-shrink: 1;
-`;
-
 export const SectionContainer = styled.View`
     border-bottom-width: 1px;
     padding-bottom: 20px;
@@ -61,17 +55,5 @@ export const Title = styled.Text`
     font-family: ${({theme}) => theme.fonts.regular};
     font-weight: bold;
     font-size: 20px;
-`;
-
-export const CheckBoxContainer = styled.View`
-    height: 25px;
-    width: 25px;
-    border-width: 1px;
-    margin: 15px;
-`;
-
-export const CheckBox = styled(RectButton)`
-    height: 25px;
-    width: 25px;
-    border-width: 1px;
+    margin-bottom: 10px;
 `;
