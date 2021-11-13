@@ -56,7 +56,7 @@ export const BedroomInformation = styled.Text`
 
 export const Package = styled.View`
     width: 100%;
-    flexDirection: row;
+    flex-direction: row;
 `;
 
 export const Itens = styled.View`

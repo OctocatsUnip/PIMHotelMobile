@@ -1,8 +1,6 @@
 import React from 'react';
 import Header from '../../components/Header';
 
-import { useForm } from 'react-hook-form';
-
 
 import {
    Container,
@@ -16,52 +14,99 @@ import {
    Text,
    Title,
    ServicesContainer,
-   InputName,
-   UserImage,
-   ImageView,
-   UserContent,
-   UserName
+
+   
+   
 } from './styles';
 
-import { InputForm } from '../../components/InputForm';
+import { Button } from '../../components/Button';
 
 
 export default function SolicitarServicos() {
-    const {control} = useForm();
    return (
-      <Container
-        contentContainerStyle={{
-            paddingHorizontal: 20,
-        }}
-      >
-          <ImageView>
-            <UserImage
-                source={require('../../assets/images/cidadeNoite.png')}
-            />
-            <UserContent>
-                <UserName>Marcelo</UserName>
-            </UserContent>
-          </ImageView>
-          <InputName>Nome do usuário</InputName>
-          <InputForm
-            name="nome_usuario"
-            control={control}
-            placeholder="Nome"
-            style={{
-                borderWidth: 1,
-                padding: 20
-            }}
-          />
-          <InputName>Profissão</InputName>
-          <InputForm
-            name="profissao"
-            control={control}
-            placeholder="Profissão"
-            style={{
-                borderWidth: 1,
-                padding: 20
-            }}
-          />
+      <Container>
+          <Header />
+          <Content>
+         
+             <TitleFirst>Executive Prime </TitleFirst>            
+             <Separator/>               
+         
+         <SectionContainer>
+                    <Title>Serviço de quarto</Title>
+                    <RowContainer>
+                        <CheckBoxContainer>
+                            <CheckBox />
+                        </CheckBoxContainer>
+                        <Text>Limpeza</Text>
+                    </RowContainer>
+                    <RowContainer>
+                        <CheckBoxContainer>
+                            <CheckBox />
+                        </CheckBoxContainer>
+                        <Text>Minhas Roupas</Text>
+                    </RowContainer>
+                    <RowContainer>
+                        <CheckBoxContainer>
+                            <CheckBox />
+                        </CheckBoxContainer>
+                        <Text>Itens Higiênicos</Text>
+                    </RowContainer>
+                </SectionContainer>
+                     
+                <SectionContainer>
+                    <Title>Comidas e Bebidas</Title>
+                    <RowContainer>
+                        <CheckBoxContainer>
+                            <CheckBox />
+                        </CheckBoxContainer>
+                        <Text>Cardápio</Text>
+                    </RowContainer>
+                    <RowContainer>
+                        <CheckBoxContainer>
+                            <CheckBox />
+                        </CheckBoxContainer>
+                        <Text>Reposição Frigobar</Text>
+                    </RowContainer>
+                    <RowContainer>
+                        <CheckBoxContainer>
+                            <CheckBox />
+                        </CheckBoxContainer>
+                        <Text>Bebidas</Text>
+                    </RowContainer>
+                </SectionContainer>
+
+                <SectionContainer>
+                    <Title>Manutenção</Title>
+                    <RowContainer>
+                        <CheckBoxContainer>
+                            <CheckBox />
+                        </CheckBoxContainer>
+                        <Text>Televisão</Text>
+                    </RowContainer>
+                    <RowContainer>
+                        <CheckBoxContainer>
+                            <CheckBox />
+                        </CheckBoxContainer>
+                        <Text>Wi-fi e Internet</Text>
+                    </RowContainer>
+                    <RowContainer>
+                        <CheckBoxContainer>
+                            <CheckBox />
+                        </CheckBoxContainer>
+                        <Text>Chuveiro</Text>
+                    </RowContainer>
+                    <RowContainer>
+                        <CheckBoxContainer>
+                            <CheckBox />
+                        </CheckBoxContainer>
+                        <Text>Outro</Text>
+                    </RowContainer>
+                </SectionContainer>
+               
+                <ServicesContainer>
+                <Button text="Solicitar!" />
+               </ServicesContainer>
+          </Content>
       </Container>
  );
 }

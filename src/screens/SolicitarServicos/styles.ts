@@ -2,35 +2,10 @@ import styled from 'styled-components/native';
 import { RectButton } from 'react-native-gesture-handler';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
-export const Container = styled.ScrollView`
+export const Container = styled.View`
     flex: 1;
     margin-top: ${getStatusBarHeight() + 10}px;
 `;
-
-export const InputName = styled.Text``;
-
-export const UserName = styled.Text`
-    color: ${({theme}) => theme.colors.white}
-`;
-
-export const UserContent = styled.View`
-    position: absolute;
-    bottom: 10px;
-    left: 40px;
-    background-color: ${({theme}) => theme.colors.buttonColor};
-    padding: 15px;
-`;
-
-export const UserImage = styled.Image`
-    height: 180px;
-    width: 180px;
-`;
-
-export const ImageView = styled.View`
-    width: 100%;
-    align-items: center
-`;
-
 
 export const Content = styled.ScrollView.attrs({
    showsVerticalScrollIndicator: false,

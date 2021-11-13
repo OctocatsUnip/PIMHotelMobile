@@ -2,14 +2,7 @@ import React, { useState } from 'react';
 import { ScrollView } from 'react-native-gesture-handler';
 import Header from '../../components/Header'
 
-import {
-   Container,
-   BedroomTypeArea,
-   BedroomTypeHeader,
-   Separator,
-   OptionsHeader,
-   OptionsArea,
-} from './styles';
+import * as S from './styles';
 
 import BedroomOptionsCard from '../../components/BedroomOptionsCard'
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
@@ -28,20 +21,20 @@ export default function Pacotes() {
          showsVerticalScrollIndicator={false}
       >
          <Header />
-         <Container>
-            <BedroomTypeArea>
-               <BedroomTypeHeader>
+         <S.Container>
+            <S.BedroomTypeArea>
+               <S.BedroomTypeHeader>
                   {bedroomType}
-               </BedroomTypeHeader>
-               <Separator />
-            </BedroomTypeArea>
-            <OptionsHeader>
+               </S.BedroomTypeHeader>
+               <S.Separator />
+            </S.BedroomTypeArea>
+            <S.OptionsHeader>
                Pacotes
-            </OptionsHeader>
-            <OptionsArea>
+            </S.OptionsHeader>
+            <S.OptionsArea>
                <BedroomOptionsCard screen="Reserva"/>
-            </OptionsArea>
-         </Container>
+            </S.OptionsArea>
+         </S.Container>
       </ScrollView>
    );
 }
