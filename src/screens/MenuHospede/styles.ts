@@ -1,5 +1,6 @@
 import styled from 'styled-components/native';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
+import theme from '../../../global/theme'
 
 export const GuestArea = styled.View``;
 
@@ -8,7 +9,8 @@ export const BedroomArea = styled.View`
 
 export const Container = styled.ScrollView.attrs({
     contentContainerStyle: {
-        backgroundColor: "white"
+        backgroundColor: theme.colors.background,
+        flex: 1,
      },
      showsVerticalScrollIndicator:false
 })`
@@ -18,7 +20,9 @@ export const Container = styled.ScrollView.attrs({
 export const BedroomHeader = styled.Text`
     font-size: 25px;
     font-weight: bold;
-    margin: 10px;
+    margin: 10px 0 30px 0;
+    text-align: center;
+    color: ${({theme}) => theme.colors.buttonColor}
 `;
 
 export const BedroomPage = styled.View`

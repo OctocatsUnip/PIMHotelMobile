@@ -5,15 +5,14 @@ import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
 export const Container = styled.View`
    flex: 1;
-   margin-top: ${getStatusBarHeight()}px;
+   margin-top: ${getStatusBarHeight() + 100}px;
+   padding: 0 20px;
+
 `;
 
-export const Content = styled.ScrollView.attrs({
-    showsVerticalScrollIndicator: false,
-    contentContainerStyle: {
-        paddingHorizontal: 20
-    }
-})``;
+export const Content = styled.View`
+    margin-bottom: 30px
+`;
 
 export const RowContainer = styled.View`
     flex-direction: row;
@@ -55,5 +54,9 @@ export const Title = styled.Text`
     font-family: ${({theme}) => theme.fonts.regular};
     font-weight: bold;
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+`;
+
+export const SliderShow = styled.Text`
+    font-size: 14px;
 `;

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {ImageRequireSource} from 'react-native'
 import { Button } from '../Button';
 
 import {
@@ -6,25 +7,29 @@ import {
     Content,
     BedroomImage,
     Description,
+    Title,
     ButtonContent
 } from './styles';
 
-export default function MyBedroomCard(){
+// interface CardProps {
+//     img: ImageRequireSource
+// }
+
+export default function MyBedroomCard({img, title}){
 
     return(
         <Container>
-            <ButtonContent>
-            <BedroomImage
-                source={require('../../assets/images/quarto1.png')}
-                resizeMode="contain"
-            />
             <Content>
+                <BedroomImage
+                    source={img}
+                    resizeMode="cover"
+                />
+                <Title>{title}</Title>
                 <Description>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </Description>
-                <Button text="Serviços" />
+                <Button text="Serviços" width="60%" />
             </Content>
-            </ButtonContent>
         </Container>
     )
 }

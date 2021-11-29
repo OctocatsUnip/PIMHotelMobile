@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
     flex-direction: row;
-    background-color: ${({theme}) => theme.colors.white};
+    background-color: ${({theme}) => theme.colors.background};
     margin-bottom: 20px;
 `;
 

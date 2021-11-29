@@ -62,7 +62,7 @@ export default function TabRoutes(){
         >
             <Tab.Screen 
                 name="Menu" 
-                component={MenuHospede}
+                component={Quartos}
                 options={{
                     tabBarIcon: (({color}) => (
                         <FontAwesome5 name="hotel" size={24} color={color} />
@@ -71,7 +71,7 @@ export default function TabRoutes(){
             />
             <Tab.Screen 
                 name="Quartos" 
-                component={Quartos}
+                component={MenuHospede}
                 options={{
                     tabBarIcon: (({color}) => (
                         <FontAwesome5 name="bed" size={24} color={color} />

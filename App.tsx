@@ -4,6 +4,7 @@ import theme from './global/theme';
 
 import AppLoading from 'expo-app-loading';
 import { useFonts, Poppins_400Regular } from '@expo-google-fonts/poppins';
+import {FilterProvider} from './hooks/filter'
 
 import Login from './src/screens/Login';
 
@@ -26,7 +27,9 @@ export default function App() {
           barStyle="dark-content"
           translucent
         />
-        <Routes />
+        <FilterProvider>
+          <Routes />
+        </FilterProvider>
       </ThemeProvider>
     );
   }

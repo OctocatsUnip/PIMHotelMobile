@@ -1,31 +1,32 @@
 import styled from 'styled-components/native';
-import { FontAwesome5 } from '@expo/vector-icons'; 
+import {Dimensions} from 'react-native'
+import { FontAwesome5, Feather } from '@expo/vector-icons'; 
 
 export const Container = styled.View`
-    width: 100%;
    align-items: center;
    justify-content: center;
-   border-width: 1px;
    border-radius: 10px;
-   margin-bottom: 10px;
-   width: 280px;
+   width: ${Dimensions.get('window').width/1.2}px;
+   margin-right: 20px;
+   padding: 20px;
 `;
 
 export const Content = styled.View`
     padding: 10px 30px;
+    align-items: center;
 `;
 
 export const RoomImage = styled.Image`
     height: 150px;
-    width: 280px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    width: ${Dimensions.get('window').width/1.2}px;
+    /* border-top-left-radius: 10px; */
+    border-radius: 10px;
 `;
 
 export const Title = styled.Text`
     font-family: ${({theme}) => theme.fonts.regular};
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
 `;
 
 export const InfoArea = styled.View`
@@ -68,7 +69,7 @@ export const DescriptionText = styled.Text`
     font-size: 14px;
 `;
 
-export const CheckIcon = styled(FontAwesome5)`
+export const CheckIcon = styled(Feather)`
     margin-right: 5px;
 `;
 

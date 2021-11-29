@@ -6,7 +6,6 @@ import {
     Container,
     Content,
     RowContainer,
-    Banner,
     Title,
     Separator,
     BedroomArea,
@@ -26,7 +25,6 @@ import {
 export default function Reserva() {
    return (
         <Container>
-            <Header />
 
             <Background source={require('../../assets/images/bannerQuarto.png')}/>
 

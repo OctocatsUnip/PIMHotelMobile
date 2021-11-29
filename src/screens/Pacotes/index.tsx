@@ -16,7 +16,6 @@ export default function Pacotes() {
          contentContainerStyle={{
             backgroundColor: "white",
             marginTop: getStatusBarHeight(),
-            paddingBottom: 60
          }}
          showsVerticalScrollIndicator={false}
       >
@@ -32,6 +31,8 @@ export default function Pacotes() {
                Pacotes
             </S.OptionsHeader>
             <S.OptionsArea>
+               <BedroomOptionsCard screen="Reserva"/>
+               <BedroomOptionsCard screen="Reserva"/>
                <BedroomOptionsCard screen="Reserva"/>
             </S.OptionsArea>
          </S.Container>

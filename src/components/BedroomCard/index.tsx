@@ -19,38 +19,52 @@ import {
     ButtonContainer
 } from './styles';
 
-export default function BedroomCard(){
+interface Props {
+    img: number;
+    title: string,
+    price: number,
+    camas: number,
+    banheiros: number
+}
+
+export default function BedroomCard({img, title, price, camas, banheiros}:Props){
 
     const theme = useTheme();
 
     return(
         <Container>
             <RoomImage
-                source={require('../../assets/images/quarto1.png')}
+                source={
+                    img == 1 
+                    ? require('../../assets/images/quarto1.png') :
+                    require('../../assets/images/quarto2.png')
+                }
                 resizeMode="cover"
             />
             <Content>
-                <Title>Executive Prime</Title>
+                <Title>{title}</Title>
                 <InfoArea>
                     <BedroomInfo>
                       <BedIcon name="bed" size={15}/>
-                      <Text>1</Text>
+                      <Text>{camas}</Text>
                       <ShowerIcon name="shower" size={15}/> 
-                      <Text>1</Text>
+                      <Text>{banheiros}</Text>
                     </BedroomInfo>
-                    <TextPrice>R$ 980,00</TextPrice>
+                    <TextPrice>{`R$ ${price}`}</TextPrice>
                 </InfoArea>
+                
                 <DescriptionContainer>
                     <CheckIcon name="check" size={15} color={theme.colors.green}/>
                     <DescriptionText>Cancelamento grátis</DescriptionText>
                 </DescriptionContainer>
-                <DescriptionContainer>
-                    <CheckIcon name="check" size={15} color={theme.colors.green}/>
+            
+                {/* <DescriptionContainer>
+                    <CheckIcon name={cafe ? "check" : "x"} size={15} color={cafe ? theme.colors.green : theme.colors.cancel}/>
                     <DescriptionText>Café da manhã</DescriptionText>
-                </DescriptionContainer>
+                </DescriptionContainer> */}
             </Content>
             <ButtonContainer>
-                <Button text="Reservar agora!" />
+                <Button text="Reservar agora!" width="80%" />
             </ButtonContainer>
         </Container>
     )

@@ -3,7 +3,8 @@ import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
 export const Container = styled.View`
    flex: 1;
-   justify-content: center;
+   background-color: ${({theme}) => theme.colors.background};
+   padding-bottom: 50px;
 `;
 
 export const Text = styled.Text``;
@@ -15,7 +16,7 @@ export const BedroomTypeArea = styled.View`
 export const BedroomTypeHeader = styled.Text`
    font-size: 28px;
    font-weight: bold;
-   margin: 10px 0;
+   margin-top: 20px;
 `;
 
 export const Separator = styled.View`

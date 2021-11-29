@@ -48,7 +48,7 @@ export const PriceContent = styled.View`
 
 export const Price = styled.Text`
     font-family: ${({ theme }) => theme.fonts.regular};
-    color: ${({ theme }) => theme.colors.gray};
+    color: ${({ theme }) => theme.colors.green};
     font-size: 32px;
     text-align: right;
     height: 40px;
@@ -56,7 +56,7 @@ export const Price = styled.Text`
 
 export const PriceDetails = styled.Text`
     font-family: ${({ theme }) => theme.fonts.regular};
-    color: ${({ theme }) => theme.colors.gray};
+    color: ${({ theme }) => theme.colors.buttonColor};
     font-size: 14px;
     text-align: right;
     height: 20px;

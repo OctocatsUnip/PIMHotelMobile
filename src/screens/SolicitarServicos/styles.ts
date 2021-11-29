@@ -4,15 +4,17 @@ import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
 export const Container = styled.View`
     flex: 1;
-    margin-top: ${getStatusBarHeight() + 10}px;
+    margin-top: ${getStatusBarHeight()}px;
 `;
 
 export const Content = styled.ScrollView.attrs({
    showsVerticalScrollIndicator: false,
-   contentContainerStyle: {
-       paddingHorizontal: 20
-   }
+   
 })``;
+
+export const ContentContainer = styled.View`
+    padding: 0 20px;
+`
 
 export const RowContainer = styled.View`
     flex-direction: row;

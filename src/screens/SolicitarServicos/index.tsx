@@ -14,7 +14,7 @@ import {
    Text,
    Title,
    ServicesContainer,
-
+   ContentContainer
    
    
 } from './styles';
@@ -25,9 +25,9 @@ import { Button } from '../../components/Button';
 export default function SolicitarServicos() {
    return (
       <Container>
-          <Header />
           <Content>
-         
+          <Header />
+            <ContentContainer>
              <TitleFirst>Executive Prime </TitleFirst>            
              <Separator/>               
          
@@ -106,6 +106,7 @@ export default function SolicitarServicos() {
                 <ServicesContainer>
                 <Button text="Solicitar!" />
                </ServicesContainer>
+               </ContentContainer>
           </Content>
       </Container>
  );
