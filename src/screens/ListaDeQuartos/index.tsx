@@ -55,7 +55,7 @@ export default function ListaDeQuartos({route}:any){
 
     async function getQuartos(){
         try {
-            await api.get('/quarto')
+            await api.get('/quartos')
             .then((response) => setAuxData(response.data))
             .finally(() => setLoad(false))
             console.log('Teste')
@@ -95,7 +95,7 @@ export default function ListaDeQuartos({route}:any){
     const onRefresh = React.useCallback(() => {
         setRefreshing(true);
         wait(1000).then(async() => {
-            await api.get('/quarto')
+            await api.get('/quartos')
             .then((response) => setData(response.data))
             .finally(() => setRefreshing(false))
             console.log('Teste2')

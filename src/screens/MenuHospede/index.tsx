@@ -14,6 +14,7 @@ import {
     Content,
     Separator,
     Container,
+    TextReplace
 } from './styles';
 
 import {Indicator} from '../../components/Indicator'
@@ -93,6 +94,10 @@ export default function MenuHospede() {
                                     //     alignItems: 'center',
                                     //     justifyContent: 'center'
                                     // }}
+                                    removeClippedSubviews={true}
+                                    ListEmptyComponent={() => (
+                                        <TextReplace>Não há quartos com esses filtros 😥</TextReplace>
+                                    )}
                                 />
                                 <Indicator
                                     data={data}

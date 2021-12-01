@@ -18,9 +18,11 @@ import {
 
 interface Props {
     screen: string;
+    descricao: string;
+    valor: number
 }
 
-export default function BedroomOptionsCard({screen}:Props) {
+export default function BedroomOptionsCard({screen, descricao, valor}:Props) {
     const [ativo, setAtivo] = useState(false);
     const {navigate} = useNavigation<any>()
 
@@ -40,9 +42,9 @@ export default function BedroomOptionsCard({screen}:Props) {
                 {
                     !ativo ?
                         <OptionArea>
-                            <OptionHeaderCompressed>
+                            <OptionHeader>
                                 Tarifa Simples
-                            </OptionHeaderCompressed>
+                            </OptionHeader>
                             <Separator />
                             <Description>
                                 Regras da Tarifa
@@ -55,15 +57,13 @@ export default function BedroomOptionsCard({screen}:Props) {
                             </OptionHeader>
                             <Separator />
                             <Description>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique aliquam gravida lectus non.consectetur adipiscing elit.
-                                {'\r\n\u2022'} Lorem ipsum dolor sit amet,
-                                {'\r\n\u2022'} Tristique aliquam gravida lectus non.
+                                {descricao}
                             </Description>
                         </OptionArea>
                 }
                 <PriceContent>
                     <Price>
-                        R$ 980
+                        R$ {valor}
                     </Price>
                     <PriceDetails>
                         Méd./Diária
@@ -72,8 +72,8 @@ export default function BedroomOptionsCard({screen}:Props) {
                 <ButtonContent>
                     <Button
                         text="Reservar agora!"
-                        width="80%"
-                        onPress={() => handlePressButton(screen)}
+                        width="100%"
+                        onPress={() => console.log("Tela de realizar reserva")}
                     />
                 </ButtonContent>
             </Content>

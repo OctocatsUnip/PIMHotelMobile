@@ -1,20 +1,21 @@
 import styled from 'styled-components/native';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
+import { FontAwesome5, Feather } from '@expo/vector-icons'; 
 
-export const Container = styled.View`
+
+export const Content = styled.View`
    flex: 1;
-   margin-top: ${getStatusBarHeight()}px;
+   padding: 40px 20px;
+   border-radius: 20px;
+   background-color: #fff;
 `;
 
-export const Content = styled.ScrollView.attrs({
+export const Container = styled.ScrollView.attrs({
     showsVerticalScrollIndicator: false,
-    contentContainerStyle: {
-        paddingHorizontal: 20
-    }
+    
 })`
-    margin-top: -20px;
+    margin-top: ${getStatusBarHeight()}px;
     background-color: white;
-    border-radius: 20px;
 `;
 
 export const RowContainer = styled.View`
@@ -30,6 +31,25 @@ export const Title = styled.Text`
     margin-bottom: 10px;
 `;
 
+export const InfoArea = styled.View`
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0
+`;
+
+export const BedIcon = styled(FontAwesome5)``;
+
+export const ShowerIcon = styled(FontAwesome5)``;
+
+export const BedroomInfo = styled.View`
+    flex-direction: row;
+    width: 25%;
+    align-items: center;
+    justify-content: space-between;
+`;
+
 export const Separator = styled.View`
     border-bottom-width: 2px;
     width: 50%;
@@ -37,9 +57,17 @@ export const Separator = styled.View`
     margin-bottom: 30px;
 `;
 
+export const Text = styled.Text`
+    margin: 0 5px;
+`;
+
 export const BedroomArea = styled.View`
     width: 100%;
 `;
+
+export const InfoAreaItems = styled.View`
+    flex-direction: row;
+`
 
 export const BedroomTitle = styled.Text`
     font-size: 18px;
@@ -87,6 +115,7 @@ export const Tag = styled.View`
 
 export const TagInformation = styled.Text`
     font-weight: bold;
+    color: green
 `;
 
 export const ButtonContainer = styled.View`
@@ -100,4 +129,5 @@ export const ButtonContainer = styled.View`
 export const Background = styled.ImageBackground`
     width: 100%;
     height: 300px;
+    margin-bottom: -20px;
 `;

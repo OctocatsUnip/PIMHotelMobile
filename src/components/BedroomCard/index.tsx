@@ -1,6 +1,8 @@
 import React from 'react';
 import { useTheme } from 'styled-components';
 import { Button } from '../Button';
+import { useNavigation, useFocusEffect } from '@react-navigation/core';
+
 
 import {
     Container,
@@ -30,6 +32,7 @@ interface Props {
 export default function BedroomCard({img, title, price, camas, banheiros}:Props){
 
     const theme = useTheme();
+    const navigation = useNavigation<any>()
 
     return(
         <Container>
@@ -64,7 +67,12 @@ export default function BedroomCard({img, title, price, camas, banheiros}:Props)
                 </DescriptionContainer> */}
             </Content>
             <ButtonContainer>
-                <Button text="Reservar agora!" width="80%" />
+                <Button text="Reservar agora!" width="80%" onPress={() => navigation.navigate("Reserva", {
+                    titulo: title,
+                    preco: price,
+                    camas: camas,
+                    banheiros: banheiros
+                })}/>
             </ButtonContainer>
         </Container>
     )

@@ -26,6 +26,8 @@ function Quartos(){
         >
             <Stack.Screen name="ListaDeQuartos" component={ListaDeQuartos}/>
             <Stack.Screen name="Filtro" component={Filtro}/>
+            <Stack.Screen name="Reserva" component={Reserva}/>
+
         </Stack.Navigator>
     )
 }
@@ -39,7 +41,6 @@ function Pacote(){
         initialRouteName="Pacotes"
         >
             <Stack.Screen name="Pacotes" component={Pacotes}/>
-            <Stack.Screen name="Reserva" component={Reserva}/>
         </Stack.Navigator>
     )
 }
@@ -61,39 +62,53 @@ export default function TabRoutes(){
             })}
         >
             <Tab.Screen 
-                name="Menu" 
+                name="Hotel" 
                 component={Quartos}
                 options={{
                     tabBarIcon: (({color}) => (
-                        <FontAwesome5 name="hotel" size={24} color={color} />
-                    ))
+                        <FontAwesome5 name="hotel" size={24} color={color} style={{marginTop: 5}}/>
+                    )),
+                    tabBarLabelStyle: {
+                        fontSize: 15
+                    }
                 }}
+                
             />
             <Tab.Screen 
                 name="Quartos" 
                 component={MenuHospede}
                 options={{
                     tabBarIcon: (({color}) => (
-                        <FontAwesome5 name="bed" size={24} color={color} />
-                    ))
+                        <FontAwesome5 name="bed" size={24} color={color} style={{marginTop: 5}}/>
+                    )),
+                    tabBarLabelStyle: {
+                        fontSize: 15
+                    }
                 }}
             />
-            <Tab.Screen 
+            {/* <Tab.Screen 
                 name="Pacote" 
                 component={Pacote}
                 options={{
                     tabBarIcon: (({color}) => (
-                        <FontAwesome5 name="smile-wink" size={24} color={color} />
-                    ))
+                        <FontAwesome5 name="smile-wink" size={24} color={color} style={{marginTop: 5}}/>
+                    )),
+                    tabBarLabelStyle: {
+                        fontSize: 15
+                    }
                 }}
-            />
+            /> */}
             <Tab.Screen 
-                name="Solicitar Servicos" 
+                name="Servicos" 
                 component={SolicitarServicos}
                 options={{
                     tabBarIcon: (({color}) => (
-                        <FontAwesome5 name="concierge-bell" size={24} color={color} />
-                    ))
+                        <FontAwesome5 name="concierge-bell" size={24} color={color} style={{marginTop: 5}}/>
+                    )),
+                    tabBarLabelStyle: {
+                        fontSize: 15
+                    },
+
                 }}
             />
         </Tab.Navigator>

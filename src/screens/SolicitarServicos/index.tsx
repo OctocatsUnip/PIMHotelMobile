@@ -28,8 +28,8 @@ export default function SolicitarServicos() {
           <Content>
           <Header />
             <ContentContainer>
-             <TitleFirst>Executive Prime </TitleFirst>            
-             <Separator/>               
+             {/* <TitleFirst>Executive Prime </TitleFirst>            
+             <Separator/>                */}
          
          <SectionContainer>
                     <Title>Serviço de quarto</Title>

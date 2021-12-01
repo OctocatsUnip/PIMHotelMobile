@@ -4,7 +4,6 @@ import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 export const Container = styled.View`
    flex: 1;
    background-color: ${({theme}) => theme.colors.background};
-   padding-bottom: 50px;
 `;
 
 export const Text = styled.Text``;
@@ -39,3 +38,5 @@ export const OptionsCard = styled.View`
    border-top-width: 5px;
    width: 80%;
 `;
+
+export const Lista = styled.FlatList``;

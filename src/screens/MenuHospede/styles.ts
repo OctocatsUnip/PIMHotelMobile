@@ -45,6 +45,11 @@ export const NewsletterHeader = styled.Text`
     font-weight: bold;
 `;
 
+export const TextReplace = styled.Text`
+    font-size: 15px;
+    margin: 150px 0;
+`;
+
 export const BannerImage = styled.Image`
     height: 120px;
     width: 100%;

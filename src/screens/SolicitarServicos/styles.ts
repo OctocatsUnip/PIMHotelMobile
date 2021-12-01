@@ -27,7 +27,7 @@ export const SectionContainer = styled.View`
     border-bottom-width: 1px;
     padding-bottom: 20px;
     border-color: ${({theme}) => theme.colors.gray};
-    margin-bottom: 10px;
+    margin: 20px 0;
 `;
 
 export const TitleFirst = styled.Text`
@@ -73,6 +73,7 @@ export const Title = styled.Text`
     font-family: ${({theme}) => theme.fonts.regular};
     font-weight: bold;
     font-size: 20px;
+    margin-bottom: 20px
 `;
 
 export const ServicesContainer = styled.View`

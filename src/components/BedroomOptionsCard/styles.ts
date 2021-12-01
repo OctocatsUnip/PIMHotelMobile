@@ -1,5 +1,6 @@
 import styled from 'styled-components/native';
 import { RectButton } from 'react-native-gesture-handler';
+import { Dimensions } from 'react-native';
 
 export const Container = styled.View`
     border-width: 1px;
@@ -7,20 +8,24 @@ export const Container = styled.View`
     border-color:  ${({ theme }) => theme.colors.buttonColor};
     background-color: ${({ theme }) => theme.colors.white};
 
-    width: 80%;
-    margin: 10px 0;
+    width: 200px;
+    height: 230px;
+    margin: 10px 10px;
+    align-items: center;
     justify-content: space-around;
+    padding: 10px 0;
 `;
 
 export const Content = styled(RectButton)`
     padding: 10px 20px;
 `;
 
-export const OptionArea = styled.View``;
+export const OptionArea = styled.View`
+`;
 
 export const OptionHeaderCompressed = styled.Text`
     font-family: ${({ theme }) => theme.fonts.regular};
-    font-size: 38px;
+    font-size: 16px;
     text-align: center;
 `;
 
@@ -49,9 +54,9 @@ export const PriceContent = styled.View`
 export const Price = styled.Text`
     font-family: ${({ theme }) => theme.fonts.regular};
     color: ${({ theme }) => theme.colors.green};
-    font-size: 32px;
+    font-size: 20px;
     text-align: right;
-    height: 40px;
+    height: 35px;
 `;
 
 export const PriceDetails = styled.Text`
