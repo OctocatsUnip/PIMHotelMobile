@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {FlatList, ActivityIndicator} from 'react-native'
+import {FlatList, ActivityIndicator, Modal} from 'react-native'
 import Header from '../../components/Header';
 import { Button } from '../../components/Button';
 import BedroomOptionsCard from '../../components/BedroomOptionsCard'
@@ -30,7 +30,11 @@ import {
     ShowerIcon,
     BedroomInfo,
     Text,
-    InfoAreaItems
+    InfoAreaItems,
+    ModalView,
+    CheckIcon,
+    ModalText,
+    ModalContent
 } from './styles';
 
 interface PropsRoute {
@@ -47,6 +51,7 @@ export default function Reserva({route}:any) {
 
     const {titulo, preco, camas, banheiros} = route.params
     const [load, setLoad] = useState(true)
+    const [loadModal, setLoadModal] = useState(false)
     const [dados, setDados] = useState<Props[]>([])
 
     const theme = useTheme()
@@ -122,10 +127,30 @@ export default function Reserva({route}:any) {
                         <TagInformation>*Pagamento Antecipado</TagInformation>
                     </Tag>
                     <ButtonContainer>
-                        <Button text="Reservar agora!" />
+                        <Button text="Reservar agora!" onPress={() => {
+                            setLoadModal(true)
+                            setTimeout(() => {
+                                setLoadModal(false)
+                            }, 2500)
+                        }}/>
                     </ButtonContainer>
                 </RowContainer>
             </Content>
+            <Modal
+                animationType="slide"
+                transparent={true}
+                visible={loadModal}
+                onRequestClose={() => {
+                  setLoadModal(false);
+                }}
+            >
+                <ModalView>
+                    <ModalContent>
+                        <CheckIcon name="check-circle" size={100} color={theme.colors.white}/>
+                        <ModalText>Reserva realizada!</ModalText>
+                    </ModalContent>
+                </ModalView>
+            </Modal>
         </Container>
    );
 }

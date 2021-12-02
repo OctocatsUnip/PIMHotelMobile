@@ -43,6 +43,8 @@ export const BedIcon = styled(FontAwesome5)``;
 
 export const ShowerIcon = styled(FontAwesome5)``;
 
+export const CheckIcon = styled(Feather)``;
+
 export const BedroomInfo = styled.View`
     flex-direction: row;
     width: 25%;
@@ -90,6 +92,28 @@ export const Package = styled.View`
 export const Itens = styled.View`
     margin-top: 30px;
     
+`;
+
+export const ModalView = styled.View`
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const ModalContent = styled.View`
+    height: 400px;
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: ${({theme}) => theme.colors.green}
+
+`;
+
+export const ModalText = styled.Text`
+    font-size: 25px;
+    margin: 20px 0;
+    color: ${({theme}) => theme.colors.white}
 `;
 
 export const ItensInformation = styled.Text`

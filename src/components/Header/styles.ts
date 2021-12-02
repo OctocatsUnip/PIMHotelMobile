@@ -1,12 +1,13 @@
 import styled from 'styled-components/native';
 import { RFValue } from 'react-native-responsive-fontsize';
+import {RectButton} from 'react-native-gesture-handler'
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
 export const Container = styled.View`
     background-color: ${({theme}) => theme.colors.primary};
 `;
 
-export const Content = styled.View`
+export const Content = styled(RectButton)`
     height: 80px;
     width: 100%;
     flex-direction: row;

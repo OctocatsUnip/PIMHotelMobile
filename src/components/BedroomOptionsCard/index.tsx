@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import {Modal} from 'react-native'
 import { Button } from '../Button';
 import {useNavigation} from '@react-navigation/native'
+import {useTheme} from 'styled-components/native'
+
 
 import {
     Container,
@@ -14,6 +17,10 @@ import {
     PriceContent,
     Price,
     PriceDetails,
+    ModalView,
+    CheckIcon,
+    ModalText,
+    ModalContent
 } from './styles';
 
 interface Props {
@@ -24,7 +31,11 @@ interface Props {
 
 export default function BedroomOptionsCard({screen, descricao, valor}:Props) {
     const [ativo, setAtivo] = useState(false);
+    const [loadModal, setLoadModal] = useState(false);
     const {navigate} = useNavigation<any>()
+
+    const theme = useTheme()
+
 
     function handlePressCard(){
         setAtivo(!ativo)
@@ -73,10 +84,30 @@ export default function BedroomOptionsCard({screen, descricao, valor}:Props) {
                     <Button
                         text="Reservar agora!"
                         width="100%"
-                        onPress={() => console.log("Tela de realizar reserva")}
+                        onPress={() => {
+                            setLoadModal(true)
+                            setTimeout(() => {
+                                setLoadModal(false)
+                            }, 2500)
+                        }}
                     />
                 </ButtonContent>
             </Content>
+            <Modal
+                animationType="slide"
+                transparent={true}
+                visible={loadModal}
+                onRequestClose={() => {
+                  setLoadModal(false);
+                }}
+            >
+                <ModalView>
+                    <ModalContent>
+                        <CheckIcon name="check-circle" size={100} color={theme.colors.white}/>
+                        <ModalText>Reserva realizada!</ModalText>
+                    </ModalContent>
+                </ModalView>
+            </Modal>
         </Container>
     )
 }

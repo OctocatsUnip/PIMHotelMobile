@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import {Alert} from 'react-native'
+import {useFilter} from '../../../hooks/filter'
 
 import {
     Container,
@@ -19,6 +21,7 @@ import {
 export default function Login(){
     const [text, setText] = useState("")
     const [senha, setSenha] = useState("")
+    const {setUser} = useFilter()
 
 
     return(
@@ -54,14 +57,23 @@ export default function Login(){
                         />
                     </UserLogin>
                     <LoginButton
-                        onPress={() => {}}
+                        onPress={() => {
+
+                            if(text == "admin" && senha == "admin"){
+                                setUser({
+                                    login: text,
+                                    senha,
+                                })
+                            }else{
+                                Alert.alert("Dados incorretos", "Usuário ou senha")
+                            }
+
+                        }}
                     >
                         <ButtonText>Entrar</ButtonText>
                     </LoginButton>
                 </LoginArea>
-                <CreateAccount>
-                    Não possui uma conta ainda? Crie uma!
-                </CreateAccount>
+                
             </ImagemFundo>
         </Container>
     )

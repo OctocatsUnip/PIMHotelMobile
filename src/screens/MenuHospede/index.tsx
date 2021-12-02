@@ -29,7 +29,6 @@ interface BackdropProps {
 
 export default function MenuHospede() {
 
-    const [page, setPage] = useState("1 2");
     const [quarto, setQuarto] = useState();
     const theme = useTheme()
 
